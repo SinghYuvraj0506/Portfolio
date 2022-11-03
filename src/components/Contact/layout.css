@@ -129,10 +129,11 @@
   }
   .map-container {
     top: 98vh;
-    margin-top: 15px;
+    margin-top: 8px;
     left: 3vw;
     width: 95%;
     height: 40vh;
+    margin-bottom: 25px !important;
   }
   .contact-form input:first-child {
     width: 90vw;

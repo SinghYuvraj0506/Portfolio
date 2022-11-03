@@ -71,3 +71,30 @@
 .fb_buttons input{
     cursor: pointer;
 }
+
+
+@media only screen and (max-width: 860px) {
+
+  .main-feedback{
+    top: 30px;
+  }
+
+  .feedback_form{
+    align-items: center;
+  }
+
+  .feedback_form input[type="text"]{
+    width: 93%;
+    font-size: 0.9rem;
+  }
+  .feedback_form input[type="url"]{
+    width: 93%;
+    font-size: 0.9rem;
+  }
+
+  .feedback_form textarea{
+    width: 93%;
+    font-size: 0.9rem;
+  }
+
+}
