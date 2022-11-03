@@ -1,0 +1,270 @@
+:root{
+    --ico_Color: black
+}
+
+/* main sidebar properties */
+
+.nav-bar{
+    background: orange;
+    width: 8vw;
+    height: 100%;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Properties of the logo */
+
+.logo img{
+    width: 8vw;
+    height: 14vh;
+    animation: rotateIn 3s linear both;
+    animation-delay: 1.3s;
+}
+
+/* Navigating section properties */
+
+.nav-bar nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 8vw;
+    height: 35vh;
+}
+
+/* properties of the icons placed in nav section */
+
+.icons{
+    width: 2em;
+    height: 2.5em;
+    padding: 8px 0px;
+    color: var(--ico_Color);
+    transition: all 0.3s ease-out;
+}
+
+.mob-site-logs{
+    visibility: hidden;
+}
+
+/* hovering effect of the section */
+nav a:hover{
+    color:rgb(14, 5, 67);
+}
+
+
+
+nav a.active svg{
+    color: rgb(2, 45, 92);
+}
+
+nav a::after{
+    content:"";
+    font-size: 13px;
+    letter-spacing: 2px;
+    position: absolute;
+    font-weight: 5em;
+    display: flex;
+    text-align: center;
+    margin-top:-17px;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+nav a:hover::after{
+    opacity: 1;
+}
+
+
+nav a:first-child:after{
+    content: "HOME";
+    margin-left:-5px;
+    
+}
+nav a:nth-child(2):after{
+    content: "ABOUT";
+    margin-left:-9px;
+}
+nav a:nth-child(3):after{
+    content: "PORTFOLIO";
+    margin-left:-23px;
+    margin-top: -13px;
+}
+nav a:nth-child(4):after{
+    content: "TESTIMONIALS";
+    margin-left:-40px;
+}
+nav a:nth-child(5):after{
+    content: "CONTACT";
+    margin-left:-16px;
+}
+
+/* properties of the social sections */
+
+.icons2{
+    width: 1.4em;
+    height: 1.9em;
+    padding: 2px 0px;
+    color: rgb(68, 5, 99);
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* menu button for mobile phone website */
+
+
+.menu{
+    background: transparent;
+    border:none;
+    visibility:hidden;
+    width: 0.1px;
+    height: 0.1px;
+    overflow: hidden;
+}
+
+
+
+@media only screen and (max-width:1170px) {
+    .nav-bar{
+        width: 100%;
+        height: 10vh;
+        position: sticky;
+        flex-direction: row;
+    }
+    .logo img{
+        width: 13vw;
+        height: 10vh;
+    }
+    .nav-bar nav{
+        flex-direction: row;
+        width: 16vw;
+        height: 10vh;
+    }
+    .icons{
+        padding:0px 10px ;
+        width: 2em;
+        height: 2em;
+    }
+    nav a::after{
+       margin-top:-4px;
+    }
+
+    nav a:first-child:after{
+        margin-left:8px;
+        
+    }
+    nav a:nth-child(2):after{
+        margin-left:3px;
+    }
+    nav a:nth-child(3):after{
+        margin-left:-13px;
+        margin-top: -3px;
+    }
+    nav a:nth-child(4):after{
+        margin-left:-23px;
+    }
+    nav a:nth-child(5):after{
+        margin-left:-4px;
+    }
+    .social{
+        flex-direction: row;
+    }
+
+    .icons2{
+        width: 1.9em;
+        height: 1.4em;
+        padding: 0px 2px;
+    }
+}
+
+@media only screen and (max-width:860px) {
+
+    .menu{
+        visibility: visible;
+        overflow: visible;
+        position: absolute;
+        top:1.3vh;
+        right: 13vw;
+    }
+
+
+    .nav-bar nav{   
+        visibility: hidden;
+
+    }
+    .social{
+        visibility: hidden;
+    }
+
+    .mob-site-logs{
+        position: absolute;
+        width: 100%;
+        height: 70%;
+        /* visibility: visible; */
+        background: rgb(0 0 0 / 90%);
+        z-index: 999;
+
+    }
+    .logs a{
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: orangered;
+        background-color: rgb(67, 62, 62);
+        border-radius: 50px;
+    }
+    
+    .logs a li{
+        letter-spacing: 3px;
+        font-size: 1.3rem;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        margin: 13px 0;
+        padding: 3px;
+
+        opacity: 0;
+        animation: fadeIn 2s forwards 1.3s;
+        /* border: 2px solid rgb(55, 53, 56); */
+    }
+
+    .mob-site-logs div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color:rgb(232, 145, 13);
+        width: 100%;
+        height: 20vh;
+    }
+
+    .mob-site-logs div div{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        height: 10vh;
+    }
+
+    .icons2{
+        width: 2.5em;
+        height: 3em;
+        margin: 0px 6px;
+        color:rgb(72, 225, 249)
+    }
+
+    .networks::before{
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        margin-bottom: 8px;
+    }
+}
+

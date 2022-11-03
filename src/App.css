@@ -1,0 +1,36 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(247, 246, 249);
+}
+
+
+.loaders div{
+    position: absolute;
+    top: 40%;
+    left:50%;
+    justify-content: center;
+    animation: fadeOut 1.5s 1s forwards;
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+  .loaders div{
+    top: 40%;
+    left:40%;
+  }
+
+}
